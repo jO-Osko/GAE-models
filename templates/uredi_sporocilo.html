@@ -7,12 +7,13 @@
 <body>
 {# Dodatna domača naloga: naj se stran prikaže malo lepše #}
 <h1>Sporočilo</h1>
-<p>{{sporocilo.besedilo}}</p>
+<form method="post">
+<input type="text" value="{{sporocilo.besedilo}}" name="nov-text">
 <p>{{sporocilo.nastanek}}</p>
 <p>{{sporocilo.key.id()}}</p>
 
-<a href="/sporocilo/{{ sporocilo.key.id() }}/edit"><button>Uredi</button></a>
-<a href="/sporocilo/{{ sporocilo.key.id() }}/delete"><button>Izbrisi</button></a>
+    <button type="submit">Uredi</button>
 
+</form>
 </body>
 </html>
